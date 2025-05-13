@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Manager Pro</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-container">
+    <header>
+      <h1>Task Manager Pro</h1>
+      <div class="task-input-container">
+        <input type="text" id="task-input" placeholder="Enter a new task...">
+        <select id="task-priority">
+          <option value="low">Low Priority</option>
+          <option value="medium" selected>Medium Priority</option>
+          <option value="high">High Priority</option>
+        </select>
+        <button id="add-task-btn">Add Task</button>
+      </div>
+    </header>
+
+    <main>
+      <div class="columns-container">
+        <div class="task-column" id="todo-column">
+          <div class="column-header">
+            <h2>To Do</h2>
+            <span class="task-count" id="todo-count">0</span>
+          </div>
+          <div class="task-list" id="todo-tasks"></div>
+        </div>
+
+        <div class="task-column" id="in-progress-column">
+          <div class="column-header">
+            <h2>In Progress</h2>
+            <span class="task-count" id="in-progress-count">0</span>
+          </div>
+          <div class="task-list" id="in-progress-tasks"></div>
+        </div>
+
+        <div class="task-column" id="completed-column">
+          <div class="column-header">
+            <h2>Completed</h2>
+            <span class="task-count" id="completed-count">0</span>
+          </div>
+          <div class="task-list" id="completed-tasks"></div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>Task Manager Pro &copy; 2025</p>
+    </footer>
+  </div>
+
+  <div class="modal" id="edit-task-modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h2>Edit Task</h2>
+      <input type="text" id="edit-task-input">
+      <select id="edit-task-priority">
+        <option value="low">Low Priority</option>
+        <option value="medium">Medium Priority</option>
+        <option value="high">High Priority</option>
+      </select>
+      <button id="save-task-btn">Save Changes</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
